@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>垂直手风琴</title>
+<style>
+html,body{margin:0;padding:0;font-size:16px;}
+.verticalAccordion{
+	width:31.25em;
+	margin:0 auto;
+}
+.verticalAccordion ul{
+	width:100%;
+	margin:0;
+	padding:0;
+}
+.verticalAccordion li{
+	list-style:none outside none;
+	display:block;
+	margin:0;
+	padding:0;
+	height:2.5em;
+	width:100%;
+	overflow:hidden;
+	background:#f0f0f0;
+}
+.verticalAccordion h3{
+	margin:0;
+	padding:.675em;
+	height:1.13em;
+	border-top:1px solid #f0f0f0;
+	text-transform:uppercase;
+	color:#000;
+	background:#ccc;
+	cursor:pointer;
+	position:relative;
+}
+.verticalAccordion h3:before{
+	content:'';
+	border:.3em solid #000;
+	border-color:#000 transparent transparent;
+	position:absolute;
+	right:.675em;
+	top:1em;
+	width:0;
+	height:0;
+}
+.verticalAccordion div{
+	margin:0;
+	overflow:auto;
+	padding:.675em;
+	height:13.75em;
+}
+.verticalAccordion li:hover {
+	height: 17.5em;
+}
+.verticalAccordion li:hover h3{
+	color:#fff;
+	background:#000;
+}
+.verticalAccordion li:hover h3:before {
+	border-color: transparent transparent transparent #fff;
+}
+.verticalAccordion li {
+	-moz-transition: height 0.3s ease-in-out;
+	-webkit-transition: height 0.3s ease-in-out;
+	-o-transition: height 0.3s ease-in-out;
+	transition: height 0.3s ease-in-out;
+}
+.verticalAccordion h3 {
+	background: -moz-linear-gradient( top, #999999, #cccccc);
+	background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#cccccc));
+	background: -webkit-linear-gradient( top, #999999, #cccccc);
+	background: -o-linear-gradient( top, #999999, #cccccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)";   
+}
+
+.verticalAccordion li:hover h3 {
+	background: -moz-linear-gradient( top, #454545, #000000); 
+	background: -webkit-gradient(linear, left top, left bottom, from(#454545), to(#000000)); 
+	background: -webkit-linear-gradient( top, #454545, #000000);
+	background: -o-linear-gradient( top, #454545, #000000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000)";   
+}
+</style>
+</head>
+
+<body>
+<div class="verticalAccordion">
+    <ul>
+        <li>
+            <h3>Heading 1</h3>
+            <div>Content for Panel 1.</div>
+        </li>
+        <li>
+            <h3>Heading 2</h3>
+            <div>Content for panel 2.</div>
+        </li>
+        <li>
+            <h3>Headgin 3</h3>
+            <div>Content for panel 3.</div>
+        </li>
+        <li>
+            <h3>Heading 4</h3>
+            <div>Content for panel 4.</div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
